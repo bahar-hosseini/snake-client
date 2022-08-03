@@ -20,11 +20,7 @@ const connect = function() {
   conn.on("connect", () => {
     conn.write("Name:BAH");
   });
-
-
   return conn;
 };
-console.log("Connecting ...");
-connect();
 
 module.exports = {connect};
