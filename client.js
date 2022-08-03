@@ -15,9 +15,6 @@ const connect = function() {
 
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
-    // setInterval(()=>{
-    //   conn.write("Move: up");
-    // },1000);
   });
 
   conn.on("connect", () => {
@@ -27,5 +24,7 @@ const connect = function() {
 
   return conn;
 };
+console.log("Connecting ...");
+connect();
 
 module.exports = {connect};
