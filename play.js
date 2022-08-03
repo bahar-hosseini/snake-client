@@ -2,7 +2,7 @@
 const net = require('net');
 
 //Internal Modules
-const  {connect}= require('./client');
+const  {connect} = require('./client');
 
 
 
