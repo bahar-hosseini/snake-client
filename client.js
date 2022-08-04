@@ -18,8 +18,9 @@ const connect = function() {
   });
 
   conn.on("connect", () => {
-    conn.write("Name:BAH");
+    conn.write("Name: BAH");
   });
+
   return conn;
 };
 

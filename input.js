@@ -1,5 +1,5 @@
 let connection;
-
+let output = '';
 const handleUserInput = function(key) {
   // your code here
   if (key === 'w') {
@@ -17,8 +17,8 @@ const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
+  connection.write(`Say: ${output += key}`);
 };
-
 const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
@@ -30,6 +30,10 @@ const setupInput = function(conn) {
   
   
   stdin.on("data", handleUserInput);
+  stdin.on("data", ()=>{
+    
+  });
+ 
   
   return stdin;
 };
