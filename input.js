@@ -1,3 +1,5 @@
+const { set } = require("lodash");
+
 let connection;
 let output = '';
 const handleUserInput = function(key) {
@@ -17,7 +19,9 @@ const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
+  
   connection.write(`Say: ${output += key}`);
+ 
 };
 const setupInput = function(conn) {
   connection = conn;
